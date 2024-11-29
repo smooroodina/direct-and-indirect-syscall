@@ -1,0 +1,17 @@
+gcc -o create_thread_ntdll.exe create_thread.c -lntdll
+gcc -o create_file_ntdll.exe create_file.c -lntdll
+gcc -o modify_reg_ntdll.exe modify_reg.c -lntdll 
+gcc -o run_proc_ntdll.exe run_proc.c -lntdll 
+
+####
+-lntdll 옵션으로 ntdll.dll을 링크했을 경우에는
+ntdll.dll에 정의된 NT 함수를 사용하고 있기 때문에
+direct syscall이 성립하지 않는다.
+위의 명령어는 전체 기능이 잘 동작하는지 중간확인을 위해서만 사용할 것.
+
+최종적으로는 필요한 NT 함수를 정의한 syscalls.h 파일과,
+ntdll.dll의 함수 호출 대신 자체 구현한 syscalls.asm을
+masm으로 컴파일한 syscalls.obj를 포함해 빌드할 것.
+(Makefile으로 만들어 둔 대로 make딸깍 하면 된다.)
+####
+

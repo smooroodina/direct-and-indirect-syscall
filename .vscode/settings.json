@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.json.liquid": "json",
+        "*.yaml.liquid": "yaml",
+        "*.md.liquid": "markdown",
+        "*.js.liquid": "liquid-javascript",
+        "*.css.liquid": "liquid-css",
+        "*.scss.liquid": "liquid-scss",
+        "syscalls.h": "c",
+        "winternl.h": "c",
+        "stdio.h": "c",
+        "windows.h": "c",
+        "ntstatus.h": "c",
+        "ntdef.h": "c"
+    }
+}
