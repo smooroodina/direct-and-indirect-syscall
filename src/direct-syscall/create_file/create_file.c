@@ -26,7 +26,7 @@ int main() {
 
     const wchar_t* fileName = L"testScript.bat";
     wchar_t fileFullPath[MAX_PATH];
-    snwprintf(fileFullPath, sizeof(fileFullPath), L"\\??\\%s\\%s", wCurrentDir, fileName);
+    snwprintf(fileFullPath, sizeof(fileFullPath), L"\\??\\%ls\\%ls", wCurrentDir, fileName);
     wprintf(L"Full path for new file: \"%ls\"\n", fileFullPath);
  
     
